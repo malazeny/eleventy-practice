@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx @11ty/eleventy --serve"
+    "clean": "rm -rf docs",
+    "build": "npm run clean && ELEVENTY_ENV=production npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@11ty/eleventy": "^3.1.2",
-    "save-dev": "^0.0.1-security"
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
   }
 }
-
