@@ -6,13 +6,13 @@ banner: /images/future.png
 layout: post.njk
 
 carousel:
-  - src: "/images/futuretravel.png"
+  - src: "{{ '/images/futuretravel.png' | prefixedUrl }}"
     caption: "Travel more!"
-  - src: "/images/money.png"
+  - src: "{{ '/images/money.png' | prefixedUrl }}"
     caption: "Make lots of money"
-  - src: "/images/family.png"
+  - src: "{{ '/images/family.png' | prefixedUrl }}"
     caption: "Have a Family"
-  - src: "/images/happy.png"
+  - src: "{{ '/images/happy.png' | prefixedUrl }}"
     caption: "And of course be happy :)"
 ---
 
