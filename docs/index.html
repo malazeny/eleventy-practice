@@ -3,44 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <title></title>
-    <link rel="stylesheet" href="/eleventy-practice/styles/styles.css">
+    <link rel="stylesheet" href="/styles/styles.css">
   </head>
-  <body>
-     <!-- _includes/nav.njk -->
- <nav>
-    <ul>
+  <body class="">
+    <!-- _includes/nav.njk -->
+<nav class="navbar">
+    <ul class="nav-list">
       
-        <li><a class="nav-item" href="/eleventy-practice/">Home</a></li>
-      
-        <li><a class="nav-item" href="/eleventy-practice/about/">About</a></li>
-      
-        <li><a class="nav-item" href="/eleventy-practice/contact/">Contact</a></li>
+        <li><a class="nav-item" href="/">Home</a></li>
       
     </ul>
   </nav>
-    <!--- injects data content from our markdown file ---> 
+  
+
+    <!-- injects content from our markdown file -->
     <main>
-        
-            <h1>Hello Welcome to my Site</h1>
-<p>Hi! I’m learning Eleventy.</p>
+      
+        <h1>Hello, Welcome to my Site</h1>
+<p>Everything you need to know about me!</p>
+<div class="banner-list">
+  <a href="/post/future/" class="banner-full">
+    <div class="banner-bg" style="background-image: url('/images/future.png')">
+      <div class="banner-text">
+        <h2>My Future</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+  <a href="/post/hobbies/" class="banner-full">
+    <div class="banner-bg" style="background-image: url('/images/hobbycover.png')">
+      <div class="banner-text">
+        <h2>My Hobbies</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+  <a href="/post/music/" class="banner-full">
+    <div class="banner-bg" style="background-image: url('/images/albumcover.png')">
+      <div class="banner-text">
+        <h2>Some of My Favorite Songs</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+  <a href="/post/mylife/" class="banner-full">
+    <div class="banner-bg" style="background-image: url('/images/mylife.png')">
+      <div class="banner-text">
+        <h2>About My Life</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
 
-        
-
-        <h2>Latest Posts</h2>
-        <ul>
-            <!-- loops through all of our md files with the tag 'post' --> 
-        
-        <li><a href="/eleventy-practice/post/first/">First Post</a> – Wed Sep 24 2025 20:00:00 GMT-0400 (Eastern Daylight Time)</li>
-        
-        <li><a href="/eleventy-practice/post/second/">Second Post</a> – Thu Sep 25 2025 20:00:00 GMT-0400 (Eastern Daylight Time)</li>
-        
-        </ul>
+      
     </main>
-    
-     <!-- _includes/footer.njk -->
-<footer>
-  <p>Copyright © 2025</p>
-</footer>
 
+    
+    
   </body>
 </html>

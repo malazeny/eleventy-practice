@@ -1,12 +1,28 @@
-nav ul{
-    display: flex;
-    flex-direction: row;
-    text-decoration: none;
-    width: 100vw;
-    justify-content: center;
-    list-style: none;
-}
+.navbar {
+    background-color: #111;
+    padding: 1rem 0;
+    text-align: center; 
+  }
 
-.nav-item {
-    padding: 20px; 
-}
+  .nav-list {
+    display: inline-flex; 
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  .nav-item {
+    color: rgb(249, 102, 102);
+    text-decoration: none;
+    font-family: "Maples";
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    color: rgb(255, 150, 150);
+  }
+  

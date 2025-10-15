@@ -3,6 +3,7 @@ const { DateTime } = require("luxon");
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("styles");
     eleventyConfig.addPassthroughCopy("assets");
+    eleventyConfig.addPassthroughCopy("fonts");
 
     eleventyConfig.addFilter("readableDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj, { zone: "utc" })
@@ -14,6 +15,9 @@ module.exports = function (eleventyConfig) {
 
     // Set pathPrefix once as a global
     eleventyConfig.addGlobalData("pathPrefix", isProduction ? "/eleventy-practice/" : "/");
+
+    eleventyConfig.addPassthroughCopy("images");
+
 
     // Creating a filter for URLs for GH Pages
     eleventyConfig.addFilter("prefixedUrl", (url, prefix) => {

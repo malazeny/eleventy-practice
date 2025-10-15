@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <link rel="stylesheet" href="/styles/styles.css">
+  </head>
+  <body class="">
+    <!-- _includes/nav.njk -->
+<nav class="navbar">
+    <ul class="nav-list">
+      
+        <li><a class="nav-item" href="/">Home</a></li>
+      
+    </ul>
+  </nav>
+  
+
+    <!-- injects content from our markdown file -->
+    <main>
+      
+   
+
+  
+
+  <article>
+    <h2>About My Life</h2>
+    
+      <p><em>October 14, 2025</em></p>
+    
+
+    
+  </article>
+
+  
+  <div class="carousel">
+    <button class="arrow left">←</button>
+
+    <div class="carousel-content">
+      <img id="carousel-image" src="/images/vienna.png" alt="Carousel image">
+      <div id="carousel-caption" class="carousel-caption">I was born in Vienna, Austria and lived there until I was 7 years old</div>
+    </div>
+
+    <button class="arrow right">→</button>
+  </div>
+
+
+
+    </main>
+
+    
+    
+  
+    <script>
+      const images = [{"src":"/images/vienna.png","caption":"I was born in Vienna, Austria and lived there until I was 7 years old"},{"src":"/images/Sudan.png","caption":"Both my parents are Sudanese and I used to visit Sudan every other year and I speak Arabic"},{"src":"/images/roosevelt.png","caption":"Then I moved to NYC and lived on Roosevelt Island until I was 13 years old"},{"src":"/images/Queens.png","caption":"Then when I was 13 I moved to Queens and still live there"},{"src":"/images/Parsons.png","caption":"Now I go to Parsons studying Design and Technology"}];
+      let currentIndex = 0;
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const imageEl = document.getElementById("carousel-image");
+        const captionEl = document.getElementById("carousel-caption");
+
+        function showImage(index) {
+          imageEl.src = images[index].src;
+          captionEl.textContent = images[index].caption;
+        }
+
+        document.querySelector(".arrow.left").addEventListener("click", () => {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          showImage(currentIndex);
+        });
+
+        document.querySelector(".arrow.right").addEventListener("click", () => {
+          currentIndex = (currentIndex + 1) % images.length;
+          showImage(currentIndex);
+        });
+      });
+    </script>
+  
+
+  </body>
+</html>

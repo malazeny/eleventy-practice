@@ -5,24 +5,17 @@
     <title>{{ site.title }}</title>
     <link rel="stylesheet" href="{{ 'styles/styles.css' | prefixedUrl }}">
   </head>
-  <body>
+  <body class="{{ className | default('') }}">
     {% include "nav.njk" %}
-    <!--- injects data content from our markdown file ---> 
+
+    <!-- injects content from our markdown file -->
     <main>
-        {% block content %}
-            {{ content | safe }}
-        {% endblock %}
-
-        <h2>Latest Posts</h2>
-        <ul>
-            <!-- loops through all of our md files with the tag 'post' --> 
-        {% for post in collections.post %}
-        <li><a href="{{ post.url | prefixedUrl }}">{{ post.data.title }}</a> – {{ post.date }}</li>
-        {% endfor %}
-        </ul>
+      {% block content %}
+        {{ content | safe }}
+      {% endblock %}
     </main>
-    
-    {% include "footer.njk" %}
 
+    {# ✅ This allows layouts like post.njk to add scripts #}
+    {% block scripts %}{% endblock %}
   </body>
 </html>

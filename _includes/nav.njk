@@ -1,8 +1,9 @@
- <!-- _includes/nav.njk -->
- <nav>
-    <ul>
+<!-- _includes/nav.njk -->
+<nav class="navbar">
+    <ul class="nav-list">
       {% for item in site.nav %}
         <li><a class="nav-item" href="{{ item.url | prefixedUrl }}">{{ item.name }}</a></li>
       {% endfor %}
     </ul>
   </nav>
+  
