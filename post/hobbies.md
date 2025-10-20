@@ -6,12 +6,12 @@ banner: /images/hobbycover.png
 layout: post.njk
 
 carousel:
-  - src: "/images/travel.png"
+  - src: "/eleventy-practice/images/travel.png"
     caption: "Travelling"
-  - src: "/images/painting.png"
+  - src: "/eleventy-practice/images/painting.png"
     caption: "Painting"
-  - src: "/images/food.png"
+  - src: "/eleventy-practice/images/food.png"
     caption: "Trying out new Foods"
-  - src: "/images/baking.png"
+  - src: "/eleventy-practice/images/baking.png"
     caption: "Baking experiments"
 ---
