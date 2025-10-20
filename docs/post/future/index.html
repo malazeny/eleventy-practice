@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <title></title>
-    <link rel="stylesheet" href="/eleventy-practice/styles/styles.css">
+    <link rel="stylesheet" href="/styles/styles.css">
   </head>
   <body class="">
     <!-- _includes/nav.njk -->
 <nav class="navbar">
     <ul class="nav-list">
       
-        <li><a class="nav-item" href="/eleventy-practice/">Home</a></li>
+        <li><a class="nav-item" href="/">Home</a></li>
       
     </ul>
   </nav>
@@ -37,7 +37,7 @@
     <button class="arrow left">←</button>
 
     <div class="carousel-content">
-      <img id="carousel-image" src="{{ &#39;/images/futuretravel.png&#39; | prefixedUrl }}" alt="Carousel image">
+      <img id="carousel-image" src="/eleventy-practice/images/futuretravel.png" alt="Carousel image">
       <div id="carousel-caption" class="carousel-caption">Travel more!</div>
     </div>
 
@@ -52,7 +52,7 @@
     
   
     <script>
-      const images = [{"src":"{{ '/images/futuretravel.png' | prefixedUrl }}","caption":"Travel more!"},{"src":"{{ '/images/money.png' | prefixedUrl }}","caption":"Make lots of money"},{"src":"{{ '/images/family.png' | prefixedUrl }}","caption":"Have a Family"},{"src":"{{ '/images/happy.png' | prefixedUrl }}","caption":"And of course be happy :)"}];
+      const images = [{"src":"/eleventy-practice/images/futuretravel.png","caption":"Travel more!"},{"src":"/eleventy-practice/images/money.png","caption":"Make lots of money"},{"src":"/eleventy-practice/images/family.png","caption":"Have a Family"},{"src":"/eleventy-practice/images/happy.png","caption":"And of course be happy :)"}];
       let currentIndex = 0;
 
       document.addEventListener("DOMContentLoaded", () => {

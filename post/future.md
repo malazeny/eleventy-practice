@@ -6,13 +6,13 @@ banner: /images/future.png
 layout: post.njk
 
 carousel:
-  - src: "{{ '/images/futuretravel.png' | prefixedUrl }}"
+  - src: "/eleventy-practice/images/futuretravel.png" 
     caption: "Travel more!"
-  - src: "{{ '/images/money.png' | prefixedUrl }}"
+  - src: "/eleventy-practice/images/money.png"
     caption: "Make lots of money"
-  - src: "{{ '/images/family.png' | prefixedUrl }}"
+  - src: "/eleventy-practice/images/family.png"
     caption: "Have a Family"
-  - src: "{{ '/images/happy.png' | prefixedUrl }}"
+  - src: "/eleventy-practice/images/happy.png"
     caption: "And of course be happy :)"
 ---
 
